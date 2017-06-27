@@ -32,6 +32,56 @@ function makeChart() {
   ctx.drawImage(tile9, 360, 360);
 };
 
+// // SAVE FOR STRETCH GOAL ONLY. CAN BE USED TO ADD NUMBER OF ELEMENTS
+// // ONE WANTS IF ONE WANTS MORE ELEMENTS
+// function defineElements(n) {
+//   var n = n;
+//   var starting = [];
+//   for (var i = 1; i < ((n * n) + 1); i++) {
+//     console.log(i);
+//     starting.push(i);
+//     console.log(starting);
+//   }
+//   console.log('Starting values: ' + starting);
+//
+//   shuffle(starting,n);
+// }
+
+// functions to shuffle tiles and split them into number of arrays needed
+// array = array you want to shuffle then split into arrays
+// n = number of arrays you want to split array
+function shuffle(array,n) {
+  var m = array.length, t, i;
+  var allArrays = [];
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+  console.log('Randomized values: ' + array);
+  splitShuffle(array,n);
+}
+
+function splitShuffle(array,n) {
+  var chunks = [],
+    i = 0,
+    x = array.length;
+
+  while (i < x) {
+    chunks.push(array.slice(i, i += n));
+  }
+
+  console.log(chunks);
+  return chunks;
+}
+
 function renderTiles() {
 //   // remove fullPic populateTiles
 };
