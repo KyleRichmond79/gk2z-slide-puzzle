@@ -16,6 +16,7 @@ var tile6 = document.getElementById('Tile6');
 var tile7 = document.getElementById('Tile7');
 var tile8 = document.getElementById('Tile8');
 var tile9 = document.getElementById('Tile9');
+var array = [tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9];
 
 function makeChart() {
   var gameCanvas = document.getElementById('gameCanvas');
@@ -50,10 +51,8 @@ function makeChart() {
 // functions to shuffle tiles and split them into number of arrays needed
 // array = array you want to shuffle then split into arrays
 // n = number of arrays you want to split array
-function shuffle(array,n) {
+function shuffle() {
   var m = array.length, t, i;
-  var allArrays = [];
-
   // While there remain elements to shuffle…
   while (m) {
 
@@ -66,13 +65,14 @@ function shuffle(array,n) {
     array[i] = t;
   }
   console.log('Randomized values: ' + array);
-  splitShuffle(array,n);
+  splitShuffle(array);
 }
 
-function splitShuffle(array,n) {
+function splitShuffle(array) {
   var chunks = [],
     i = 0,
-    x = array.length;
+    x = array.length,
+    n = 3;
 
   while (i < x) {
     chunks.push(array.slice(i, i += n));
