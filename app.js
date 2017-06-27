@@ -18,32 +18,31 @@ var tile8 = document.getElementById('Tile8');
 var tile9 = document.getElementById('Tile9');
 
 function makeChart() {
-  var gameCanvas = document.getElementById('gameCanvas')
+  var gameCanvas = document.getElementById('gameCanvas');
   var fullPic = document.getElementById('fullCatImage');
   var ctx = gameCanvas.getContext('2d');
-ctx.drawImage(tile1, 0, 0);
-ctx.drawImage(tile2, 180, 0);
-ctx.drawImage(tile3, 360, 0);
-ctx.drawImage(tile4, 0, 180);
-ctx.drawImage(tile5, 180, 180);
-ctx.drawImage(tile6, 360, 180);
-ctx.drawImage(tile7, 0, 360);
-ctx.drawImage(tile8, 180, 360);
-ctx.drawImage(tile9, 360, 360);
+  ctx.drawImage(tile1, 0, 0);
+  ctx.drawImage(tile2, 180, 0);
+  ctx.drawImage(tile3, 360, 0);
+  ctx.drawImage(tile4, 0, 180);
+  ctx.drawImage(tile5, 180, 180);
+  ctx.drawImage(tile6, 360, 180);
+  ctx.drawImage(tile7, 0, 360);
+  ctx.drawImage(tile8, 180, 360);
+  ctx.drawImage(tile9, 360, 360);
 };
 
-
-// function renderTiles() {
+function renderTiles() {
 //   // remove fullPic populateTiles
-// };
-
+};
 // function
 //function to check and set local storage
 // if local storage, render current game, else create new game
 //e handler
-  // function shuffleTiles(allTiles) {}
-  // function to render the tiles to the canvas
-    // count clicks, push local storage
+// function shuffleTiles(allTiles) {}
+
+// function to render the tiles to the canvas
+// count clicks, push local storage
 //function to check settings
 //function to validate tiles adjcent
 //function to render tile movement
