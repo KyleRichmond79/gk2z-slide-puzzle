@@ -32,51 +32,68 @@ ctx.drawImage(allTiles[1][2], 360, 180);
 ctx.drawImage(allTiles[2][0], 0, 360);
 ctx.drawImage(allTiles[2][1], 180, 360);
 ctx.drawImage(allTiles[2][2], 360, 360);
-};
 
 
-// Initial Tile Set up
-// function MakeComponents(width, height, path, xPos, yPos, type) {
-//   if (type === 'image') {
-//     this.image = new Image();
-//     this.image.src = path;
+// // SAVE FOR STRETCH GOAL ONLY. CAN BE USED TO ADD NUMBER OF ELEMENTS
+// // ONE WANTS IF ONE WANTS MORE ELEMENTS
+// function defineElements(n) {
+//   var n = n;
+//   var starting = [];
+//   for (var i = 1; i < ((n * n) + 1); i++) {
+//     console.log(i);
+//     starting.push(i);
+//     console.log(starting);
 //   }
-//     this.width = width;
-//     this.height = height;
-//     this.xPos = xPos;
-//     this.yPos = yPos;
-//     this.type = type;
+//   console.log('Starting values: ' + starting);
 //
-//     this.update = function() {
-//       ctx = gameCanvas.getContext('2d');
-//       if (type === 'image') {
-//         ctx.drawImage(this.image,
-//             this.xPos,
-//             this.yPos,
-//             this.width,
-//             this.height);
-//         }
-//     }
+//   shuffle(starting,n);
 // }
 
-//function to render new set up based on array positions
-//
-//
+// functions to shuffle tiles and split them into number of arrays needed
+// array = array you want to shuffle then split into arrays
+// n = number of arrays you want to split array
+function shuffle() {
+  var m = array.length, t, i;
+  // While there remain elements to shuffle…
+  while (m) {
 
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
 
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+  console.log('Randomized values: ' + array);
+  splitShuffle(array);
+}
 
+function splitShuffle(array) {
+  var chunks = [],
+    i = 0,
+    x = array.length,
+    n = 3;
 
-// function renderTiles() {
+  while (i < x) {
+    chunks.push(array.slice(i, i += n));
+  }
+
+  console.log(chunks);
+  return chunks;
+}
+
+function renderTiles() {
 //   // remove fullPic populateTiles
-// };
-
+};
 // function
 //function to check and set local storage
 // if local storage, render current game, else create new game
 //e handler
-  // function shuffleTiles(allTiles) {}
-  // function to render the tiles to the canvas
-    // count clicks, push local storage
+// function shuffleTiles(allTiles) {}
+
+// function to render the tiles to the canvas
+// count clicks, push local storage
 //function to check settings
 //function to validate tiles adjcent
 //function to render tile movement
