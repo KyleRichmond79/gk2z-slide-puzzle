@@ -16,22 +16,28 @@ var toptileArray = [tile1, tile2, tile3];
 var midtileArray = [tile4, tile5, tile6];
 var bottileArray = [tile7, tile8, tile9];
 var allTiles = [toptileArray, midtileArray, bottileArray];
-var allImages = [];
+var array = [tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9];
 
 
 
 function makeChart() {
   var gameCanvas = document.getElementById('gameCanvas')
   var ctx = gameCanvas.getContext('2d');
-ctx.drawImage(allTiles[0][0], 0, 0);
-ctx.drawImage(allTiles[0][1], 180, 0);
-ctx.drawImage(allTiles[0][2], 360, 0);
-ctx.drawImage(allTiles[1][0], 0, 180);
-ctx.drawImage(allTiles[1][1], 180, 180);
-ctx.drawImage(allTiles[1][2], 360, 180);
-ctx.drawImage(allTiles[2][0], 0, 360);
-ctx.drawImage(allTiles[2][1], 180, 360);
-ctx.drawImage(allTiles[2][2], 360, 360);
+ctx.drawImage(array[0], 0, 0);
+ctx.drawImage(array[1], 180, 0);
+ctx.drawImage(array[2], 360, 0);
+ctx.drawImage(array[3], 0, 180);
+ctx.drawImage(array[4], 180, 180);
+ctx.drawImage(array[5], 360, 180);
+ctx.drawImage(array[6], 0, 360);
+ctx.drawImage(array[7], 180, 360);
+ctx.drawImage(array[8], 360, 360);
+}
+
+function renderMove() {
+
+}
+
 
 
 // // SAVE FOR STRETCH GOAL ONLY. CAN BE USED TO ADD NUMBER OF ELEMENTS
